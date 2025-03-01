@@ -14,10 +14,6 @@ export interface Component {
     dataPath: string;
   };
   validation?: ValidationRules;
-  // İç içe bileşenler için children dizisi ekliyoruz
-  children?: Component[];
-  // Ebeveyn bileşen ID'si (iç içe yapı için)
-  parentId?: string | null;
 }
 
 export interface ValidationRules {
@@ -69,11 +65,4 @@ export interface FormPreviewSettings {
 // Form data - önizleme için
 export interface FormData {
   [key: string]: any;
-}
-
-// Etiket tipi - ek iyileştirmeler için
-export interface ComponentLabel {
-  id: string;
-  name: string;
-  color: string;
 }
